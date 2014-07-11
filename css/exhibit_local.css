@@ -1,0 +1,133 @@
+/* CSS for the gallery-full-right layout */
+
+.exhibit-item-link img {
+    -webkit-box-shadow: #cccccc 3px 3px 3px;
+    -moz-box-shadow: #cccccc 3px 3px 3px;
+    box-shadow: #cccccc 3px 3px 3px;
+}
+
+.gallery-showcase img {
+    -webkit-box-shadow: #cccccc 3px 3px 3px;
+    -moz-box-shadow: #cccccc 3px 3px 3px;
+    box-shadow: #cccccc 3px 3px 3px;
+    max-width:440px;
+    min-width:380px;
+}
+
+.layout-gallery .gallery-showcase {
+  margin-bottom:1em;
+}
+
+#outeriframe
+{
+   width:960px;
+   height:350px;
+   overflow:hidden;
+   position:relative;
+}
+
+#inneriframe
+{
+   position:absolute;
+   top:-44px;
+   left:-160px;
+   width:1280px;
+   height:1200px;
+}
+
+.gallery-thumbnails-text-bottom .exhibit-item {
+	text-align: center;
+}
+
+.gallery-thumbnails-text-bottom .primary {
+	text-align: center;	
+}
+
+.chrome #exhibit-page-title {
+  padding-top: 0.67em;
+}
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.exhibit-item .full {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.exhibit-description .left {
+    -webkit-box-shadow: #cccccc 3px 3px 3px;
+    -moz-box-shadow: #cccccc 3px 3px 3px;
+    box-shadow: #cccccc 3px 3px 3px;
+    max-width:400px;
+    float:left;
+    margin: 5px 13px 5px 10px;
+}
+
+.exhibit-description .right {
+    -webkit-box-shadow: #cccccc 3px 3px 3px;
+    -moz-box-shadow: #cccccc 3px 3px 3px;
+    box-shadow: #cccccc 3px 3px 3px;
+    max-width:400px;
+    float:right;
+    margin: 5px 10px 5px 13px;
+}
+
+.caption-title {
+  font-weight:bold;
+  font-variant:small-caps;
+  font-size:1.3em;
+}
+
+.caption-text-lg {
+  font-size:1.3em;
+}
+
+.center-cropped {
+    width: 100px;  // change to desired width.
+    height: 100px; // change to desired height.
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Set the image to fill its parent and make transparent */
+.center-cropped img {
+   min-height: 100%;
+   min-width: 100%;
+
+   /* IE 8 */
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   /* IE 5-7 */
+   filter: alpha(opacity=0);
+   /* modern browsers */
+   opacity: 0;
+}
+
+#imageframe
+{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+    border: 5px solid #0D233C;
+    float: left;
+}
+#imgthumb {
+    position:absolute;
+    left: -15%;
+    right: -100%;
+    top: -15%;
+    bottom: -100%;
+    margin: auto; 
+    min-height: 100%;
+    min-width: 100%;
+}

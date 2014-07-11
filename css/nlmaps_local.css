@@ -1,0 +1,19 @@
+#waypoints a.title {
+	font-size:12pt;
+	line-height: 1em;
+	padding: 0.4em 0.5em 0.25em 
+}
+
+
+
+#neatline-map .bubble .title {
+	font-size:1.5em;
+}
+
+#neatline-map .element {
+	margin-bottom: 0;
+}
+
+#neatline-map h3 {
+	margin-bottom:5px;
+}

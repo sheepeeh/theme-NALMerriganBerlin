@@ -1,0 +1,96 @@
+
+.neatlinetime-timeline .timeline-band-1 .timeline-ether-bg{
+	background: rgb(1, 85, 129);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #003752), 
+		color-stop(1, #1B5373)
+	);
+	background-image: -o-linear-gradient(top, #003752 0%, #1B5373 100%);
+	background-image: -moz-linear-gradient(top, #003752 0%, #1B5373 100%);
+	background-image: -webkit-linear-gradient(top, #003752 0%, #1B5373 100%);
+	background-image: -ms-linear-gradient(top, #003752 0%, #1B5373 100%);
+	background-image: linear-gradient(to top, #003752 0%, #1B5373 100%);
+	}
+
+.timeline-event-label {
+     -o-text-overflow: ellipsis;   /* Opera */
+    text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+     -moz-binding: url('/exhibits/merrigan/css/ellipsis.xml#ellipsis'); /* Workaround for Firefox */
+    overflow:hidden;              /* don't show excess chars */
+    white-space:nowrap;           /* force single line */
+    width: 350px;                 /* fixed width */
+}
+
+.timeline-band-inner {
+	background: rgb(247, 247, 237);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #F7F7ED),
+		color-stop(1, #fff)
+	);
+	background-image: -o-linear-gradient(top, #F7F7ED 0%, #fff 100%);
+	background-image: -moz-linear-gradient(top, #F7F7ED 0%, #fff 100%);
+	background-image: -webkit-linear-gradient(top, #F7F7ED 0%, #fff 100%);
+	background-image: -ms-linear-gradient(top, #F7F7ED 0%, #fff 100%);
+	background-image: linear-gradient(to top, #F7F7ED 0%, #fff 100%);
+
+}
+
+
+.fullscreen .neatlinetime-timeline {
+	overflow: visible !important;
+	height:600px;
+}
+
+.fullscreen #white-wrapper {
+	width:100% !important;
+
+}
+
+.fullscreen #content {
+	width:100% !important;
+}
+
+.fullscreen .timeline-band-1 {
+	top: 550px !important;
+	height:50px !important;
+}
+
+
+.fullscreen .timeline-band-0 {
+	height: 550px !important;
+}
+
+/*
+header {
+display: none;
+}
+
+#primary-nav {
+display: none;
+}
+
+#content h1 {
+display: none;
+}
+
+body {
+	background: none;
+}
+
+#admin-bar {
+	display: none;
+}
+
+#content {
+	border: 0px;
+}
+
+.navigation {
+	display: none;
+}*/

@@ -1,3 +1,4 @@
+
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
 <div id="primary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
@@ -19,7 +20,7 @@
     <?php endif; ?>
     <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
     <!-- Featured Exhibit -->
-    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+    <?php echo exhibit_builder_display_random_featured_exhibit_more_text(); ?>
     <?php endif; ?>
 
 </div><!-- end primary -->
@@ -36,17 +37,22 @@
         <ul class="items-list">
         <?php foreach (loop('items') as $item): ?>
         <li class="item">
-            <h3><?php echo link_to_item(); ?></h3>
+
+            <?php if (metadata('item', 'has thumbnail')): ?>
+                <?php echo files_for_item(array('item_image' => 'square_thumbnail', 'imgAttributes' => array('alt' => 'Thumbnail for the first content page of the item, linking to the full file.' ))); ?>
+            <?php endif; ?>
+            <h3><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title'), array('snippet'=>150)), array('class'=>'permalink')); ?></h3>
             <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
                 <p class="item-description"><?php echo $itemDescription; ?></p>
             <?php endif; ?>
+
         </li>
         <?php endforeach; ?>
         </ul>
         <?php else: ?>
         <p><?php echo __('No recent items available.'); ?></p>
         <?php endif; ?>
-        <p class="view-items-link"><?php echo link_to_items_browse(__('View All Items')); ?></p>
+        <p class="view-items-link"><a href="/exhibits/merrigan/items/browse?=">View All Items</a></p>
     </div><!-- end recent-items -->
     
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>

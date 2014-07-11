@@ -1,21 +1,38 @@
 <?php if ($items): ?>
-    <?php foreach ($items as $item): ?>
-        <?php
-        $title = metadata($item, array('Dublin Core', 'Title'));
-        $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+<?php foreach ($items as $item): ?>
+<?php
+        $title = metadata($item, array('Dublin Core', 'Title'), array('snippet' => 75));
+        $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 200));
         ?>
-        <?php if (metadata($item, 'has thumbnail')) {
+<h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>
+<?php if (metadata($item, 'has thumbnail')) {
             echo link_to_item(
-                item_image('square_thumbnail', array(), 0, $item), 
+                item_image('square_thumbnail', array(), 0, $item),
                 array('class' => 'image'), 'show', $item
             );
         }
         ?>
-        <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>
-        <?php if ($description): ?>
-            <p class="item-description"><?php echo $description; ?></p>
-        <?php endif; ?>
-    <?php endforeach; ?>
+
+
+<?php if ($description): ?>
+<p class="item-description"><?php echo $description; ?>
+</p>
+
+<?php endif; ?>
+<div style="float:right;clear:both;margin-bottom:-20px;"><p>
+	<?php 
+		if ($item->id == 5434) {
+			echo "<strong>1</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>3</a>";
+		}
+		elseif ($item->id == 4303) {
+			echo "<strong>2</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>3</a>";
+		}
+		else {
+			echo "<strong>3</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>3</a>";
+		}
+?>
+</p></div>
+<?php endforeach; ?>
 <?php else: ?>
-    <p><?php echo __('No featured items are available.'); ?></p>
+<p><?php echo __('No featured items are available.'); ?></p>
 <?php endif; ?>
