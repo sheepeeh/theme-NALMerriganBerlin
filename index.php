@@ -26,7 +26,15 @@
 </div><!-- end primary -->
 
 <div id="secondary">
-    <!-- Recent Items -->
+    <?php
+    $recentItems = get_theme_option('Homepage Recent Items');
+    if ($recentItems === null || $recentItems === ''):
+        $recentItems = 3;
+    else:
+        $recentItems = (int) $recentItems;
+    endif;
+    if ($recentItems):
+    ?>
     <div id="recent-items">
         <h2><?php echo __('Recently Added Items'); ?></h2>
         <?php
@@ -54,6 +62,7 @@
         <?php endif; ?>
         <p class="view-items-link"><a href="/exhibits/merrigan/items/browse?=">View All Items</a></p>
     </div><!-- end recent-items -->
+
     
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 

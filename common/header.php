@@ -9,17 +9,15 @@
 
         <?php
         if (isset($title)) {
-        $titleParts[] = strip_formatting($title);
-        }
-        $titleParts[] = option('site_title');
-        ?>
-        <title><?php echo implode(' &middot; ', $titleParts); ?></title>
+            $titleParts[] = option('site_title');
+            ?>
+            <title><?php echo implode(' &middot; ', $titleParts); ?></title>
 
         <?php echo auto_discovery_link_tags(); ?>
 
         <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
         <!-- Stylesheets -->
-        <?php queue_css_file('nal_style'); ?>
+        <?php queue_css_file(array('iconfonts', 'style'));; ?>
 
         <!-- NAL header styles -->
         <?php queue_css_file('nal_header'); ?>
@@ -37,7 +35,7 @@
         <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
         <?php queue_js_file('vendor/respond'); ?>
         <?php queue_js_file('globals'); ?>
-        <?php queue_js_file('css_browser_selector'); ?>
+        <?php echo head_js(); ?>
 
 
         <?php echo head_js(); ?>
@@ -45,6 +43,7 @@
     </head>
 
     <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="white-wrapper">
         <header id="header-back">
@@ -102,8 +101,16 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
             <div id="search-container">
+<<<<<<< HEAD
                 <h2>Search</h2>
                 <?php echo search_form(array('show_advanced'=>TRUE)); ?>
+=======
+                <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+                <?php echo search_form(array('show_advanced' => true)); ?>
+                <?php else: ?>
+                <?php echo search_form(); ?>
+                <?php endif; ?>
+>>>>>>> upstream/master
             </div>
         </header>
 
