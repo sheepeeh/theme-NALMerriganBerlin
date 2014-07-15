@@ -39,7 +39,7 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
 
         else
         {
-            echo '<h3>'.link_to_item(metadata('item', array('Dublin Core','Title')), array('snippet'=>150), array('class'=>'permalink')).'</h3>';
+            echo '<h3>'.link_to_item(metadata('item', array('Dublin Core','Title'), array('snippet'=>150)), array('class'=>'permalink')).'</h3>';
         }
     ?>
 

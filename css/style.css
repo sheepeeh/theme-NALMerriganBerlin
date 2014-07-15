@@ -1145,7 +1145,15 @@ header:after {
 #featured-exhibit h3 {
   margin: 0 0 1em;
 }
-#featured-item img,
+#featured-item img {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2px;
+  background-color: #fff;
+
+}
+
+
 #featured-collection img,
 #featured-exhibit img {
   float: left;
@@ -1372,7 +1380,9 @@ ul.title-list {
   clear: left;
   margin-left: 216px;
 }
-
+#recent-items .item-file a {
+  display: initial;
+}
 .item-file a {
   display: block;
   height: 9em;

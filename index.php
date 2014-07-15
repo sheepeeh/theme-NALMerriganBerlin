@@ -62,7 +62,7 @@
         <?php endif; ?>
         <p class="view-items-link"><a href="/exhibits/merrigan/items/browse?=">View All Items</a></p>
     </div><!-- end recent-items -->
-
+   <?php endif; ?>
     
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 
