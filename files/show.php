@@ -16,11 +16,7 @@
 
 
 <div id="primary" style="float: left; width: 310px; margin-left:20px;">
-    <?php echo file_markup($file, array('imageSize'=>'fullsize')); ?>
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/refactoring/integration
+    <div class="files"><?php echo file_markup($file, array('imageSize'=>'fullsize')); ?></div>
 </div>
 
 

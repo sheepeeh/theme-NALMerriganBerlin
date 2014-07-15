@@ -1278,7 +1278,9 @@ ul.title-list {
   margin-right: -10px;
 }
 
-.files .item-file img { /** NAL customization **/
+.files .item-file a img { /** NAL customization **/
+  width:auto;
+  height:auto;
   max-width: 530px;
   float:left;
   clear:none;
