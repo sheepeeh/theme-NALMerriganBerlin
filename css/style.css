@@ -1386,7 +1386,6 @@ ul.title-list {
   display: initial;
 }
 .item-file a {
-  display: block;
   height: 9em;
 }
 .item-file a img {
