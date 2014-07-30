@@ -4,7 +4,7 @@
 }
 
 .exhibit-item-link img {
-	border: 5px solid #333367;
+	border: 5px solid #036;
 	margin-top: 5px;
 	margin-left: 3px;
 	box-shadow:none !important;
@@ -23,7 +23,7 @@
 .exhibit-item-caption {
 	font-size: 0.8em;
 	margin-bottom: 1.2em !important;
-	width: 83.5%;
+	width: 835px;
 	float: right;
 	background-color: #fff;
 	margin-top: 10px;
@@ -43,7 +43,7 @@
     vertical-align: top;
     margin-bottom: 1.25%;
     min-height: 120px;
-    background-color: rgba(206, 217, 233, 1);
+    background-color: #F7F7ED;
     min-width: 960px;
 	margin-right: 5px;
 }
@@ -53,7 +53,7 @@
 
     .layout-gallery .exhibit-item {
     	width:700px;
-    	border-left:5px solid rgba(206, 217, 233, 1);
+    	border-left:5px solid #F7F7ED;
     }
 
     .exhibit-item-link {
@@ -63,7 +63,7 @@
     .layout-gallery .exhibit-item, .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width: 700px;
         min-width: 700px;
-        border-right:5px solid rgba(206, 217, 233, 1);
+        border-right:5px solid #F7F7ED;
     }
 
     .exhibit-item-caption {
@@ -80,7 +80,7 @@
 
 	.layout-gallery .exhibit-item {
     	width:700px;
-    	border-left:5px solid rgba(206, 217, 233, 1);
+    	border-left:5px solid #F7F7ED;
     }
     .exhibit-item-link {
         float:none;
@@ -89,7 +89,7 @@
     .layout-gallery .exhibit-item .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width: 300px;
         min-width: 300px;
-        border-right:5px solid rgba(206, 217, 233, 1);
+        border-right:5px solid #F7F7ED;
     }
 
     .exhibit-item-caption {
@@ -106,7 +106,7 @@
 
    .layout-gallery .exhibit-item {
     	width:700px;
-    	border-left:5px solid rgba(206, 217, 233, 1);
+    	border-left:5px solid #F7F7ED;
     }
 
     .exhibit-item-link {
@@ -116,7 +116,7 @@
     .exhibit-item-caption {
         width: 320px;
         float:none;
-		border-right:5px solid rgba(206, 217, 233, 1);
+		border-right:5px solid #F7F7ED;
     }
 
     .layout-gallery .exhibit-item .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
@@ -135,7 +135,7 @@
 @media only screen and (max-width: 640px) {
     .layout-gallery .exhibit-item {
     	width:600px;
-    	border-left:5px solid rgba(206, 217, 233, 1);
+    	border-left:5px solid #F7F7ED;
     }
     .exhibit-item-link {
         float:none;
@@ -144,7 +144,7 @@
     .layout-gallery .exhibit-item, .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width:300px;
         min-width: 300px;
-        border-right:5px solid rgba(206, 217, 233, 1);
+        border-right:5px solid #F7F7ED;
     }
 
     .exhibit-item-caption {
@@ -175,11 +175,10 @@ p {
 
 .layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
    float:right;
-   margin-right:10px;
 }
 
 .layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-caption {
-   float:left;
+   float:right;
    margin-right:0px;
    margin-left:10px;
 }

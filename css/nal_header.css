@@ -63,13 +63,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .header__name-and-slogan {
     float: left;
+    padding: 0.5% 0px;
 }
 
 .header__site-name {
     margin: 0px;
     font-size: 1.125em;
     font-family: Helvetica;
-    line-height: 1.5em !important;
+    line-height: 1.125em !important;
     padding-top: 5px;
     font-variant:normal;
     font-weight: 600;
@@ -90,7 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .header__site-slogan {
     margin: 0px;
-    font-size: 0.938em;
+    font-size: 1em;
     font-family: Helvetica;
     font-weight: bold;
     line-height: 1.5em;
@@ -99,8 +100,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #sub-links {
     color: #F2F2F2;
     float: right;
-    background-color: #807E4D;
-    border: 2px solid #807E4D;
+    background-color: #333367;
+    border: 2px solid #333367;
     font-size: 80%;
     text-align: justify;
     max-width: 415px;
@@ -188,7 +189,7 @@ ul.inline li {
 
 #footer-links {
     color: #FFF;
-    background: none repeat scroll 0% 0% #0D233C;
+    background: none repeat scroll 0% 0% #333367;
     font-size: 0.8em;
     font-weight: normal;
     text-align: center;

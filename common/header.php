@@ -63,7 +63,7 @@
                             <div>
                                 <h1 class="header__site-name" id="site-name">
                                 <a href="http://www.nal.usda.gov/" title="National Agricultural Library" class="header__site-link" rel="home" target="_blank">
-                                    <span>National Agricultural Library</span>
+                                    <span>United States Department of Agriculture</span>
                                 </a>
                                 </h1>
                             </div>
@@ -71,7 +71,7 @@
                             <div>
                                 <h2 class="header__site-slogan" id="site-slogan">
                                 <a href="http://www.nal.usda.gov/" title="United States Department of Agriculture" target="_blank">
-                                    <span>United States Department of Agriculture</span>
+                                    <span>National Agricultural Library</span>
                                 </a>
                                 </h2>
                             </div>
@@ -96,7 +96,7 @@
             <!-- End NAL main header -->
 
             <!-- Bread crumbs -->
-            <span class="breadcrumbs"> <a href="http://nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="http://specialcollections.nal.usda.gov/exhibits-0" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
+            <span class="breadcrumbs"> <a href="http://nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="/exhibits" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
             
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 

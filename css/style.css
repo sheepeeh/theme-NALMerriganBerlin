@@ -416,8 +416,7 @@ body {  /** NAL customization **/
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 18px;
   color: #000;
-  background: url("../images/nal_bg.png") repeat-x scroll left top #d5d390;
-  background-size: 1px 100%;
+  background-color:#ABBACF;
 }
 
 form, fieldset {
@@ -535,11 +534,11 @@ th {
 
 /* -- Links -- */
 a:link, a:visited {  /** NAL customization **/
-  color: #18569E;
+  color: rgb(45,53,165);
 }
 
 a:hover, a:active {  /** NAL customization **/
-  color: #C0563C;
+  color: #005DFF;
 }
 
 img a {
@@ -677,7 +676,7 @@ header:after {
 }
 #search-container input[type=submit] {  /** NAL customization **/
   padding: 2px;
-  background: #0D233C;
+  background: #333367;
   color: white;
   position: absolute;
   border: 0;
@@ -715,7 +714,7 @@ header:after {
 }
 
 #advanced-search:after {  /** NAL customization **/
-  content: "\2026";
+  content: "+";
   display: block;
   text-indent: 0;
   text-align: center;
@@ -726,7 +725,7 @@ header:after {
   height: 30px;
   top: 0;
   bottom: 0;
-  font-size: 14px;
+  font-size: 1.5em;
   line-height: 30px;
 }
 
@@ -810,8 +809,7 @@ header:after {
   margin: 0 auto;
   padding: 0;
   width: 960px;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #333367;
   z-index: 50;
 }
 #primary-nav:after {
@@ -837,12 +835,11 @@ header:after {
   }
 }
 #primary-nav ul {
-  padding: 0 0 0 1px;
+  padding: 0px;
 
 }
 #primary-nav li {
   list-style-type: none;
-  margin: 0 0 -1px -1px;
   position: relative;
 }
 #primary-nav .navigation {
@@ -856,7 +853,7 @@ header:after {
   overflow: visible;
 }
 #primary-nav .navigation > li:first-child a {
-  border-left: 1px solid #ccc;
+
 }
 #primary-nav a { /** NAL customization **/
   behavior: url("../javascripts/boxsizing.htc");
@@ -866,17 +863,19 @@ header:after {
   text-decoration: none;
   display: block;
   padding: 0.65em 18px;
-  background: #F7F7ED;
-  border: 1px solid #ccc;
+  background: #333367;
+  color:#fff;
 }
-#primary-nav a:hover { /** NAL customization **/
-  background: #fff;
-  color: #C0563C;
+#primary-nav a:hover,
+ #primary-nav > ul > li > ul > li.active > ul > li > a:hover
+ { /** NAL customization **/
+  background-color: rgba(75,93,150,1);
+  color: #fff;
 }
 #primary-nav li.active > a { /** NAL customization **/
-  background: #fff;
+  background-color:#EDF1F7;
   font-weight: bold;
-  color: #036;
+  color: #333367;
 }
 #primary-nav li ul, #primary-nav li ul ul { /** NAL customization **/
   display: none;
@@ -895,6 +894,18 @@ header:after {
 #primary-nav li:hover > ul li {  /** NAL customization **/
   width: 160px;
   margin-top: -5px;
+  }
+
+#primary-nav > ul > li > ul > li.active a {  /** NAL customization **/
+  color:#fff;
+  font-weight:bold;
+  background-color: rgb(99,115,144);
+  }
+
+  #primary-nav > ul > li > ul > li.active > ul > li > a {  /** NAL customization **/
+  color:#fff;
+  font-weight:normal;
+  background-color: #333367;
   }
 
 #primary-nav li ul li:hover > ul {
@@ -1125,7 +1136,7 @@ header:after {
 
 #featured-item { /** NAL customization **/
   overflow: hidden;
-  background: #F7F7ED;
+  background: rgba(237, 241, 247, 1);
   padding: 1.5em 20px;
   margin-bottom: 1.5em;
 }
@@ -1159,7 +1170,7 @@ header:after {
   float: left;
   border: 1px solid #ccc;
   padding: 2px;
-  height: 10.5em;
+  height: 5em;
   width: auto;
   background-color: #fff;
 }
@@ -1177,18 +1188,30 @@ header:after {
   margin-bottom: 18px;
   border: 1px solid #ccc;
   padding: 2px;
-  max-height: 75px;
+  max-height: 6em;
+  max-width:6em;
 }
 
 #recent-items .item .image {
   height: 6em;
 }
+
+#recent-items a:hover img, .browse .item .item-meta .item-img a:hover img{
+  border: 1px solid #005DFF;
+  
+}
+
 #recent-items .item h3 {
   margin-top: 0;
 }
 
+#recent-items .items-list {
+  padding-left: 0px;
+}
+
 .view-items-link {
   margin-bottom: 0em;
+  text-align:right;
 }
 
 /* @end */
@@ -1796,8 +1819,8 @@ ul.title-list {
 .collections .item-img a {
   display: block;
   height: 6em;
+  width:6em;
   border: 1px solid #ccc;
-  padding: 2px;
 }
 .collections .item-img img {
   height: 100%;

@@ -4,7 +4,7 @@
 }
 
 .exhibit-item-link img {
-	border: 5px solid #333367;
+	border: 5px solid #036;
 	margin-top: 5px;
 	margin-left: 3px;
 	box-shadow:none !important;
@@ -23,7 +23,7 @@
 .exhibit-item-caption {
 	font-size: 0.8em;
 	margin-bottom: 1.2em !important;
-	width: 83.5%;
+	width: 835px;
 	float: right;
 	background-color: #fff;
 	margin-top: 10px;
@@ -43,7 +43,7 @@
     vertical-align: top;
     margin-bottom: 1.25%;
     min-height: 120px;
-    background-color: #ABBACF;
+    background-color: #F7F7ED;
     min-width: 960px;
 	margin-right: 5px;
 }
@@ -65,11 +65,10 @@ p {
 
 .layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
    float:right;
-   margin-right:10px;
 }
 
 .layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-caption {
-   float:left;
+   float:right;
    margin-right:0px;
    margin-left:10px;
 }
@@ -96,7 +95,7 @@ padding: 10px 5px 0px 5px;
 	-webkit-box-shadow: #cccccc 3px 3px 3px;
     -moz-box-shadow: #cccccc 3px 3px 3px;
     box-shadow: #cccccc 3px 3px 3px;
-    border:5px solid #333367;
+    border:5px solid #036;
     margin-bottom:10px;
 
 }
@@ -106,7 +105,7 @@ padding: 10px 5px 0px 5px;
 	-webkit-box-shadow: #cccccc -3px 3px 3px;
     -moz-box-shadow: #cccccc -3px 3px 3px;
     box-shadow: #cccccc -3px 3px 3px;
-    border:5px solid #333367;
+    border:5px solid #036;
     margin-bottom:10px;
 
 }
