@@ -892,8 +892,8 @@ header:after {
   box-shadow: #cccccc 3px 3px 3px;
 }
 #primary-nav li:hover > ul li {  /** NAL customization **/
-  width: 160px;
-  margin-top: -5px;
+  width: 161px;
+  margin-top: -.4em;
   }
 
 #primary-nav > ul > li > ul > li.active a {  /** NAL customization **/
