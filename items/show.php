@@ -47,8 +47,7 @@
 <div id="secondary" style="float: left; display: inline; margin-left: 10px; width: 590px; margin-right: 0px;  padding-left: 10px;">
   <div id="item-metadata">
      <?php echo all_element_texts('item'); ?>
-     <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
+      
       <?php if(metadata('item','Collection Name')): ?>
         <div id="collection" class="element">
           <h3><?php echo __('Series'); ?></h3>
@@ -58,7 +57,12 @@
 
       <div id="related-exhibits" class="element">
         <?php echo link_to_related_exhibits($item); ?>
-      </div>  
+      </div> 
+
+     <?php echo get_specific_plugin_hook_output('ItemRelations', 'public_items_show', array('view' => $this, 'item' => $item)); ?>
+     <?php echo get_specific_plugin_hook_output('Coins', 'public_items_show', array('view' => $this, 'item' => $item)); ?>
+
+ 
 
  </div>
 

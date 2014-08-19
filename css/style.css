@@ -1365,6 +1365,28 @@ ul.title-list {
   ;
 }
 
+#item-relations-display-item-relations {
+  padding-bottom:1.5em;
+}
+
+#item-relations-display-item-relations .binder-items {
+  text-indent:-1em;
+  margin-left:1em;
+}
+
+#item-relations-display-item-relations ul {
+    list-style: none outside none;    
+    padding-left:0px;
+}
+
+
+#item-relations-display-item-relations ul > li {
+    margin-bottom:-13px;    
+}
+
+#related-exhibits {
+  margin-bottom:0px;
+}
 
 /* Items Classes*/
 .element {
@@ -1410,10 +1432,6 @@ ul.title-list {
 }
 .item-file a {
   height: 9em;
-}
-.item-file a img {
-  height: 100%;
-  width: auto;
 }
 
 .item h2 {

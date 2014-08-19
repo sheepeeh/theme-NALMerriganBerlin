@@ -248,4 +248,16 @@ function custom_paging() {
     }
 }
 
+/*
+** Simplifies Omeka's looping syntax -- thanks to Erin Bell
+*/
+function get_item_obj($itemsArray,$num=1){
+    if($itemsArray){
+        $myItems=get_records('Item',$itemsArray,$num);
+        set_loop_records('Items', $myItems);
+        $items = get_loop_records('Items');
+        return $items;
+    }
+}
+
 ?>
