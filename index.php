@@ -51,10 +51,6 @@
 	                <?php echo files_for_item(array('item_image' => 'square_thumbnail', 'imgAttributes' => array('alt' => 'Thumbnail for the first content page of the item, linking to the full file.' ))); ?>
 	            <?php endif; ?>
 	            <h3><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title'), array('snippet'=>150)), array('class'=>'permalink')); ?></h3>
-	            <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
-	                <p class="item-description"><?php echo $itemDescription; ?></p>
-	            <?php endif; ?>
-
 	        </li>
 
         <?php endforeach; ?>
