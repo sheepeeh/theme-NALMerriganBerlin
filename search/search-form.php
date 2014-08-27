@@ -63,7 +63,11 @@
     </div>
 <p><a href="/exhibits/merrigan/items/search?query=&amp;query_type=keyword&amp;record_types%5B%5D=Item&amp;record_types%5B%5D=File">Advanced Search</a></p>
 </fieldset>
+<button id="submit_search" value="Search" type="submit" name="submit_search">
 
+    Search
+
+</button>
 <input type="submit" name="" value="Search"></form>
 
 <script type="text/javascript">

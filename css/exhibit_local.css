@@ -6,6 +6,13 @@
     box-shadow: #cccccc 3px 3px 3px;
 }
 
+#content > div.exhibit-block > div > div > div > a:hover > img:hover {
+    -webkit-box-shadow: #777 3px 3px 3px;
+    -moz-box-shadow: #777 3px 3px 3px;
+    box-shadow: #777 3px 3px 3px;
+}
+}
+
 .gallery-showcase img {
     -webkit-box-shadow: #cccccc 3px 3px 3px;
     -moz-box-shadow: #cccccc 3px 3px 3px;

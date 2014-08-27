@@ -5,7 +5,7 @@
    
 /* Custom */
 label {
-  font-weight: 800;
+  font-weight: 600;
   }
    
 /**
@@ -685,6 +685,18 @@ header:after {
   width: 30px;
   text-indent: -9999px;
 }
+
+#search-container button {
+  background: #0D233C;
+  color: white;
+  position: absolute;
+  border: 0;
+  right: 0;
+  top: 0;
+  width: 30px;
+  text-indent: -9999px;
+}
+
 #search-container button:after {
   font-family: "FontAwesome";
   content: "\f002";
@@ -1192,7 +1204,6 @@ header:after {
   margin-left: 18px;
   margin-bottom: 18px;
   border: 1px solid #ccc;
-  padding: 2px;
   max-height: 6em;
   max-width:6em;
 }
@@ -2155,6 +2166,11 @@ footer nav + p {
 .exhibits.show #exhibit-pages a { /** NAL customization **/
   color: #015581;
 }
+
+.exhibits.show #exhibit-pages a:hover { /** NAL customization **/
+  color:#005DFF;
+}
+
 .exhibits.show #exhibit-pages ul {
   padding-left: 0;
   margin-left: 0;
@@ -2186,8 +2202,8 @@ footer nav + p {
 
 .exhibit-page-nav a:link, .exhibit-page-nav a:hover {
   padding: 0.5em 5px;
-  color: #C0563C !important;
   text-decoration: none;
+  color:#005DFF;
 }
 
 .exhibit-page-nav#secondary-nav li { /** NAL customization **/
@@ -2203,7 +2219,9 @@ footer nav + p {
   margin-left: 20px;
 }
 
-.exhibit-page-nav a:hover
+.exhibit-page-nav a:hover {
+    color:#005DFF;
+}
 .exhibit-page-nav a:active,
 .exhibit-page-nav .current a { /** NAL customization **/
   background: #fff;
@@ -2366,7 +2384,6 @@ footer nav + p {
   }
   #mobile-nav li.current a { /** NAL customization **/
     background: #fff;
-    color: #C0563C;
   }
   #mobile-nav li ul {
     position: relative;
