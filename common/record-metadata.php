@@ -37,7 +37,7 @@
 
         // Make Table of Contents an unordered list
         elseif ($elementName == 'Table of Contents'):
-            $customText = "<ul><li style='margin-bottom: -13px;''>$text</li></ul>";
+            $customText = "<ul class='toc'><li>$text</li></ul>";
 
         // Make rights statement link to contact page
          elseif ($elementName == 'Rights'):
@@ -50,11 +50,21 @@
 
 
         <div class="element-text">
+            <?php
 
+                if ($elementName == 'Coverage') {
+                   $pos = preg_match("/POINT\(/",$text);
+                } else {
+                    $pos = false;
+                }
+            ?>
             <?php if ($customText): ?>
                 <?php echo $customText; ?>
-                <?php else: ?>
+            <?php elseif ($pos!=true): ?>
+              
                 <?php echo $text; ?>
+
+            <?php else: ?>
             <?php endif; ?>
             
         </div>

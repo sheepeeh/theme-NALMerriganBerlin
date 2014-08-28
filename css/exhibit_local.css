@@ -196,3 +196,7 @@
   text-align:right;
   float:right;
 }
+
+.exhibit-item-caption h3 {
+  font-size:16px;
+}

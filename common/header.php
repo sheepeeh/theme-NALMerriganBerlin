@@ -96,7 +96,7 @@
             <!-- End NAL main header -->
 
             <!-- Bread crumbs -->
-            <span class="breadcrumbs"> <a href="http://nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="/exhibits" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
+            <span class="breadcrumbs"> <a href="http://nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="http://specialcollections.nal.usda.gov/exhibits-0" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
             
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
