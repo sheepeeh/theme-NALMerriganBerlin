@@ -74,7 +74,7 @@ function link_to_related_exhibits($item) {
         echo '<h3>Appears in Exhibits</h3>';
         foreach($exhibits as $exhibit) {
             if (!in_array($exhibit->slug, $inlist)) {
-                echo '<p><a href="/exhibits/merrigan/exhibits/show/'.$exhibit->slug.'">'.$exhibit->title.'</a></p>';
+                echo '<div-class="element-text"><a href="/exhibits/merrigan/exhibits/show/'.$exhibit->slug.'">'.$exhibit->title.'</a></div>';
                 array_push($inlist, $exhibit->slug);
             }
         }
@@ -145,6 +145,45 @@ function custom_paging() {
                         $list[] = $value;
                 }
         }
+        //Browsing exhibit 8 items
+        elseif (strpos($_SERVER['HTTP_REFERER'],'exhibits/show/career') != false) {
+            $exhibit_query = "search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&public=&featured=&exhibit=8&submit_search=Search&sort_field=Dublin+Core%2CDate";
+            parse_str($exhibit_query, $queryarray);
+            unset($queryarray['page']);
+
+             // if (!array_key_exists('sort_field', $queryarray))
+             //    {
+             //            $queryarray['sort_field'] = 'added';
+             //            $queryarray['sort_dir'] = 'd';
+             //    }
+                //Get an array of the items from the query.
+                $list = get_db()->getTable('Item')->findBy($queryarray);
+                foreach ($list as $value) {
+                        $itemIds[] = $value->id;
+                        $list[] = $value;
+                }
+
+        }
+
+        //Browsing exhibit 7 items
+        elseif (strpos($_SERVER['HTTP_REFERER'],'exhibits/show/organizations') != false) {
+            $exhibit_query = "search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&public=&featured=&exhibit=7&submit_search=Search&sort_field=Dublin+Core%2CDate";
+            parse_str($exhibit_query, $queryarray);
+            unset($queryarray['page']);
+
+             // if (!array_key_exists('sort_field', $queryarray))
+             //    {
+             //            $queryarray['sort_field'] = 'added';
+             //            $queryarray['sort_dir'] = 'd';
+             //    }
+                //Get an array of the items from the query.
+                $list = get_db()->getTable('Item')->findBy($queryarray);
+                foreach ($list as $value) {
+                        $itemIds[] = $value->id;
+                        $list[] = $value;
+                }
+
+        }        
         //Browsing exhibit 4 items
         elseif (strpos($_SERVER['HTTP_REFERER'],'exhibits/show/organic-research') != false) {
             $exhibit_query = "search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&public=&featured=&exhibit=4&submit_search=Search&sort_field=Dublin+Core%2CDate";
