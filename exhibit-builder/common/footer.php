@@ -1,12 +1,12 @@
-</div><!-- end content -->
+<!-- end content -->
 <!--Return to sending page -->
 
 
 <footer>
-
+    <div class="previous-page">
     <?php echo to_previous() ?>
-
-<!--     <div id="footer-content" class="center-div">
+    </div>
+    <div id="footer-content" class="center-div">
         <?php if($footerText = get_theme_option('Footer Text')): ?>
         <div id="custom-footer-text">
             <p><?php echo get_theme_option('Footer Text'); ?></p>
@@ -14,12 +14,16 @@
         <?php endif; ?>
         <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
         <p><?php echo $copyright; ?></p>
-        <?php endif; ?> -->
+        <?php endif; ?>
         <!-- Begin NAL Footer -->
 
 
         <div id="footer-panels-wrapper">
-          <div id="footer-links">
+            <div class="region region-footer-first">
+                <div id="block-block-4" class="block block-block first last odd">
+
+
+                    <div id="footer-links">
                         <ul>
                             <li><a href="http://specialcollections.nal.usda.gov" target="_blank">Special Collections Home</a></li>
                             <li><a href="http://www.nal.usda.gov" target="_blank">NAL Home</a></li>
@@ -36,14 +40,24 @@
                             <li><a class="ext" href="http://www.usa.gov" target="_blank">USA.gov</a></li>
                             <li><a class="ext" href="http://www.whitehouse.gov" target="_blank">White House</a></li>
                         </ul>
+                    </div>
+
+                </div>
             </div>
-
-
+        </div>
 
         <footer id="footer" class="region region-footer">
-            <div id="footer-address" class="navigation">National Agricultural Library &nbsp;&nbsp;&nbsp; 10301 Baltimore Avenue &nbsp;&nbsp;&nbsp; Beltsville, MD 20705 &nbsp;&nbsp;&nbsp; 301-504-5755</div>
+            <div id="block-block-7" class="block block-block first last odd">
+
+
+                <div id="footer-address" class="navigation">National Agricultural Library &nbsp;&nbsp;&nbsp; 10301 Baltimore Avenue &nbsp;&nbsp;&nbsp; Beltsville, MD 20705 &nbsp;&nbsp;&nbsp; 301-504-5755</div>
+
+            </div>
         </footer>
         <!-- End NAL Footer -->
+
+        
+
     </div><!-- end footer-content -->
 
      <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>

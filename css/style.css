@@ -414,7 +414,7 @@ table {
 
 body {  /** NAL customization **/
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 18px;
+  line-height: 1.25em;
   color: #000;
   background-color:#ABBACF;
 }
@@ -432,7 +432,7 @@ input[type=text], input[type=password], textarea {
 
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 18px;
+  margin-bottom: 1.25em;
 }
 
 h1, h2, h3 {  /** NAL customization **/
@@ -454,14 +454,14 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.25em;
+  line-height: 1.25em;
   color: #015581;
 }
 
 h4, h5 {
   font-size: 15px;
-  line-height: 18px;
+  line-height: 1.25em;
 }
 
 h4 {
@@ -780,7 +780,7 @@ header:after {
 }
 
 #search-form fieldset fieldset {
-  margin-bottom: 18px;
+  margin-bottom: 1.25em;
 }
 
 
@@ -873,7 +873,7 @@ header:after {
   box-sizing: border-box;
   text-decoration: none;
   display: block;
-  padding: 0.65em 18px;
+  padding: 0.65em 1.25em;
   background: #333367;
   color:#fff;
 }
@@ -1200,8 +1200,8 @@ header:after {
 
 #recent-items .item img { /** NAL customization **/
   float: right;
-  margin-left: 18px;
-  margin-bottom: 18px;
+  margin-left: 1.25em;
+  margin-bottom: 1.25em;
   border: 1px solid #ccc;
   max-height: 6em;
   max-width:6em;
@@ -1316,7 +1316,7 @@ ul.title-list {
 
 #item-images {
   overflow: hidden;
-  margin-bottom: 18px;
+  margin-bottom: 1.25em;
   margin-right: -10px;
 }
 
@@ -1466,7 +1466,7 @@ ul.title-list {
   clear: both;
   overflow: hidden;
   border-top: 1px solid #eee;
-  padding-top: 18px;
+  padding-top: 1.25em;
 }
 
 .item-pagination a { /** NAL customization **/
@@ -1702,7 +1702,7 @@ ul.title-list {
 
 #sort-links { /** NAL customization **/
   float: right;
-  margin: 4px 0px 18px 0px;
+  margin: 4px 0px 1.25em 0px;
   padding: 0px;
   list-style-type: none;
   display: block;
@@ -1744,9 +1744,9 @@ ul.title-list {
 
 .remove_search {
   text-indent: -9999px;
-  width: 18px;
+  width: 1.25em;
   position: relative;
-  height: 18px;
+  height: 1.25em;
   color: #666;
 }
 .remove_search:after {
@@ -1758,7 +1758,7 @@ ul.title-list {
   top: 0;
   left: 0;
   position: absolute;
-  line-height: 18px;
+  line-height: 1.25em;
 }
 
 /* @end */

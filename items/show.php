@@ -63,7 +63,8 @@
 
       <div id="related-exhibits" class="element">
         <?php echo link_to_related_exhibits($item); ?>
-      </div> 
+      </div>
+
 
      <?php echo get_specific_plugin_hook_output('ItemRelations', 'public_items_show', array('view' => $this, 'item' => $item)); ?>
      
