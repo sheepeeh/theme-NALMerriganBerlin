@@ -83,7 +83,8 @@
                     <div id="sub-nav-container">
                         <nav class="header__secondary-menu" id="sub-links" role="navigation">
                         <ul id="secondary-menu-sub-links" class="links inline clearfix">
-                        <li class="menu-433"><a target="_blank" href="http://specialcollections.nal.usda.gov/contact-us-0" title="Contact Us" id="contact">Contact</a>
+                        <li class="menu-432 first"><a href="http://www.nal.usda.gov/ask-question" title="Ask a Question" id="ask">Ask</a></li>
+                        <li class="menu-433"><a target="_blank" href="http://www.nal.usda.gov/contact-us" title="Contact Us" id="contact">Contact</a>
                         </li>
                         <li class="menu-434 last"><a target="_blank" href="http://www.nal.usda.gov/visit-library" title="Visit the Library" id="visit">Visit</a>
                         </li>

@@ -21,7 +21,6 @@
         <div id="footer-panels-wrapper">
           <div id="footer-links">
                         <ul>
-                            <li><a href="http://specialcollections.nal.usda.gov" target="_blank">Special Collections Home</a></li>
                             <li><a href="http://www.nal.usda.gov" target="_blank">NAL Home</a></li>
                             <li><a href="http://www.usda.gov" target="_blank">USDA.gov</a></li>
                             <li><a href="http://www.ars.usda.gov" target="_blank">Agricultural Research Service</a></li>

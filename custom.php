@@ -90,19 +90,16 @@ function to_previous() {
     $referer = $_SERVER['HTTP_REFERER'];
     $uri = $_SERVER['REQUEST_URI'];
 
-    if ($referer) {
-        echo '<div class="previous-page">';
-    }
-
+    
     if ($uri != "/exhibits/merrigan/" && $uri != "/exhibits/merrigan") {
            if (strpos($referer, 'exhibits/show') != false && strpos($referer, '/item/') == false) {
-              echo '<p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Exhibit</a></p></div>';
+              echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Exhibit</a></p></div>';
            } elseif (strpos($uri, 'files/show') != false) {
-              echo '<p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Item</a></p></div>';
+              echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Item</a></p></div>';
            } elseif (strpos($referer, 'items/browse') != false) {
-              echo '<p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Search Results</a></p></div>';
+              echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Search Results</a></p></div>';
            } elseif (strpos($referer, 'collections/show') != false) {
-              echo '<p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Collection Page</a></p></div>';
+              echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Collection Page</a></p></div>';
            }   
         }
     }

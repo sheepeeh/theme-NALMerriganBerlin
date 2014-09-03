@@ -27,10 +27,10 @@
 			echo "<strong>2</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
 		}
 		elseif ($item->id == 4646) {
-			echo "<strong>2</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
+			echo "<strong>3</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
 		}
 		elseif ($item->id == 4183) {
-			echo "<strong>2</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
+			echo "<strong>4</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
 		}
 		else {
 			echo "<strong>5</strong> of <a href='/exhibits/merrigan/items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items' title='View all featured items'>5</a>";
