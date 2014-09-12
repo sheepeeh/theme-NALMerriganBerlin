@@ -302,4 +302,24 @@ function get_item_obj($itemsArray,$num=1){
     }
 }
 
+function print_num_of_count($searchFor)  {
+        $featuredItems =  get_random_featured_items(5);
+
+        $i = 0;
+        $positions = array();
+
+        foreach ($featuredItems as $fItem) {
+           $positions[$i] = $fItem['id'];
+           $num = $i + 1;
+
+           if ($fItem['id'] == $searchFor) {
+
+             echo '<strong>' . $num . '</strong>' .' of ' . count($featuredItems);
+           
+            }
+
+
+           $i += 1;
+        }
+    }
 ?>
