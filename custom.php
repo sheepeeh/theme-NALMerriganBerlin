@@ -318,7 +318,7 @@ function print_num_of_count($searchFor)  {
 
            if ($fItem['id'] == $searchFor) {
 
-             echo '<strong>' . $num . '</strong>' .' of ' . count($featuredItems);
+             echo '<strong>' . $num . '</strong>' .' of ' . '<a href="items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items">' . count($featuredItems) . '</a>';
            
             }
 

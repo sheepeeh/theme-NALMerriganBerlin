@@ -4,13 +4,13 @@
     'bodyid' => metadata('simple_pages_page', 'slug')
 )); ?>
 <div id="primary">
-     <?php if (metadata('simple_pages_page', 'slug') == 'about'): ?>
+     <?php if (metadata('simple_pages_page', 'slug') == 'about' || 'short-code-tests'): ?>
         <?php
             $text = metadata('simple_pages_page', 'text', array('no_escape' => true));
             if (metadata('simple_pages_page', 'use_tiny_mce')) {
-                echo $text;
+                echo $this->shortcodes($text);
             } else {
-                echo eval('?>' . $text);
+                echo eval('?>' . $this->shortcodes($text));
             }
         ?>
     <?php else: ?>
