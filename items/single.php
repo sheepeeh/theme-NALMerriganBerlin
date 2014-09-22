@@ -19,5 +19,30 @@
 </div>
 
 <div style="float:right;clear:both;margin-bottom:-20px;"><p>
-	<?php print_num_of_count($item->id); ?>
+    <?php
+
+        $featuredItems =  get_random_featured_items(5);
+
+        usort($featuredItems, function($a, $b) {
+             return $a['id'] - $b['id'];
+        });
+
+        $i = 0;
+        $positions = array();
+
+        foreach ($featuredItems as $fItem) {
+           $positions[$i] = $fItem['id'];
+           $num = $i + 1;
+
+           if ($fItem['id'] == $item->id) {
+
+             echo '<a href="items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items">View all ' . count($featuredItems) . ' featured items.</a>';
+           
+            }
+
+
+           $i += 1;
+        }
+    ?>
+
 </p></div>

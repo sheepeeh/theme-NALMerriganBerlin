@@ -1,8 +1,12 @@
 
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-<div id="primary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
-    <p><?php echo $homepageText; ?></p>
+    <p class="homepage-text"><?php echo $homepageText; ?></p>
+    <?php endif; ?>
+<div id="primary">
+    <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+    <!-- Featured Exhibit -->
+    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
     <?php endif; ?>
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
@@ -18,10 +22,7 @@
         <?php echo random_featured_collection(); ?>
     </div><!-- end featured collection -->
     <?php endif; ?>
-    <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-    <!-- Featured Exhibit -->
-    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-    <?php endif; ?>
+
 
 </div><!-- end primary -->
 
@@ -58,7 +59,7 @@
         <?php else: ?>
         <p><?php echo __('No recent items available.'); ?></p>
         <?php endif; ?>
-        <p class="view-items-link"><a href="/exhibits/merrigan/items/browse?=">View All Items</a></p>
+        <p class="view-items-link"><a href="<?php echo url('items/browse'); ?>">View All Items</a></p>
     </div><!-- end recent-items -->
    <?php endif; ?>
     

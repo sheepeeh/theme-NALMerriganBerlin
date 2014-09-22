@@ -13,7 +13,7 @@
         queue_css_file('t-gal2');
         echo head_css();
     } elseif ($pg_title == 'Development Documents' || $pg_title == 'Implementation Documents') {
-        queue_css_file('text-gal');
+        queue_css_file('gal');
         echo head_css();
     }
     

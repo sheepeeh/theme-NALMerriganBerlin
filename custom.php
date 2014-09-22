@@ -74,7 +74,7 @@ function link_to_related_exhibits($item) {
         echo '<h3>Appears in Exhibits</h3>';
         foreach($exhibits as $exhibit) {
             if (!in_array($exhibit->slug, $inlist)) {
-                echo '<div class="element-text"><a href="/exhibits/merrigan/exhibits/show/'.$exhibit->slug.'">'.$exhibit->title.'</a></div>';
+                echo '<div class="element-text"><a href="' . url('/exhibits/merrigan/exhibits/show/') . $exhibit->slug . '">'.$exhibit->title.'</a></div>';
                 array_push($inlist, $exhibit->slug);
             }
         }
@@ -91,7 +91,7 @@ function to_previous() {
     $uri = $_SERVER['REQUEST_URI'];
 
     
-    if ($uri != "/exhibits/merrigan/" && $uri != "/exhibits/merrigan") {
+    if ($uri != "/exhibits/speccoll/merrigan/" && $uri != "/exhibits/speccoll/merrigan") {
            if (strpos($referer, 'exhibits/show') != false && strpos($referer, '/item/') == false) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Exhibit</a></p></div>';
            } elseif (strpos($uri, 'files/show') != false) {
@@ -302,28 +302,5 @@ function get_item_obj($itemsArray,$num=1){
     }
 }
 
-function print_num_of_count($searchFor)  {
-        $featuredItems =  get_random_featured_items(5);
 
-        usort($featuredItems, function($a, $b) {
-             return $a['id'] - $b['id'];
-        });
-
-        $i = 0;
-        $positions = array();
-
-        foreach ($featuredItems as $fItem) {
-           $positions[$i] = $fItem['id'];
-           $num = $i + 1;
-
-           if ($fItem['id'] == $searchFor) {
-
-             echo '<strong>' . $num . '</strong>' .' of ' . '<a href="items/browse?search=&advanced[0][element_id]=&advanced[0][type]=&advanced[0][terms]=&range=&collection=&type=&user=&tags=&public=&featured=1&exhibit=&submit_search=Search+for+items">' . count($featuredItems) . '</a>';
-           
-            }
-
-
-           $i += 1;
-        }
-    }
 ?>

@@ -52,41 +52,38 @@
             <!-- Begin NAL main header -->
                  <header class="header" id="header" role="banner">
 
-                    <div id="header_logo_site_info">
+                   <div id="header_logo_site_info">
+    
                         <div class="logo-col">
-                            <a href="http://www.nal.usda.gov/" title="United States Department of Agriculture" class="header__logo" id="logo" target="_blank">
-                            <img src="http://www.nal.usda.gov/sites/all/themes/nal/images/usdalogocolor.png" alt="United States Department of Agriculture" class="header__logo-image">
-                            </a>
+                             <a href="/" title="United States Department of Agriculture" class="header__logo" id="logo"><img src="http://www.nal.usda.gov/sites/all/themes/nal/images/usdalogocolor.png" alt="United States Department of Agriculture" class="header__logo-image"></a>
                         </div>
 
                         <div class="header__name-and-slogan" id="name-and-slogan">
                             <div>
-                                <h1 class="header__site-name" id="site-name">
-                                <a href="http://www.nal.usda.gov/" title="National Agricultural Library" class="header__site-link" rel="home" target="_blank">
-                                    <span>United States Department of Agriculture</span>
-                                </a>
-                                </h1>
-                            </div>
-
-                            <div>
                                 <h2 class="header__site-slogan" id="site-slogan">
-                                <a href="http://www.nal.usda.gov/" title="United States Department of Agriculture" target="_blank">
-                                    <span>National Agricultural Library</span>
-                                </a>
+                                    <a href="/" title="United States Department of Agriculture"><span>United States Department of Agriculture</span></a>
                                 </h2>
-                            </div>
+                            </div>  
+
+                          <div>
+                            <h1 class="header__site-name" id="site-name">
+                                <a href="/" title="National Agricultural Library" class="header__site-link" rel="home"><span>National Agricultural Library</span></a>
+                            </h1>
                         </div>
-                        <!-- /#name-and-slogan -->
+
+                    </div><!-- /#name-and-slogan -->
+        
+
 
                     </div>
 
                     <div id="sub-nav-container">
                         <nav class="header__secondary-menu" id="sub-links" role="navigation">
                         <ul id="secondary-menu-sub-links" class="links inline clearfix">
-                        <li class="menu-432 first"><a href="http://www.nal.usda.gov/ask-question" title="Ask a Question" id="ask">Ask</a></li>
-                        <li class="menu-433"><a target="_blank" href="http://www.nal.usda.gov/contact-us" title="Contact Us" id="contact">Contact</a>
+                        <li class="menu-432 first"><a href="http://www.nal.usda.gov/ask-question" title="Ask a Question" id="ask" target="_blank">Ask</a></li>
+                        <li class="menu-433"><a target="_blank" href="http://www.nal.usda.gov/contact-us" title="Contact Us" id="contact" target="_blank">Contact</a>
                         </li>
-                        <li class="menu-434 last"><a target="_blank" href="http://www.nal.usda.gov/visit-library" title="Visit the Library" id="visit">Visit</a>
+                        <li class="menu-434 last"><a target="_blank" href="http://www.nal.usda.gov/visit-library" title="Visit the Library" id="visit" target="_blank">Visit</a>
                         </li>
                         </ul>
                         </nav>
@@ -95,7 +92,7 @@
             <!-- End NAL main header -->
 
             <!-- Bread crumbs -->
-            <span class="breadcrumbs"> <a href="http://nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="http://specialcollections.nal.usda.gov/exhibits-0" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
+            <span class="breadcrumbs"> <a href="http://www.nal.usda.gov">National Agricultural Library</a> &gt; <a href="http://specialcollections.nal.usda.gov/" title="Special Collections at the National Agricultural Library">Special Collections</a> &gt; <a href="http://specialcollections.nal.usda.gov/exhibits-0" title="Special Collections Online Exhibits Page">Exhibits</a> &gt; The Merrigan Collection</span>
             
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 

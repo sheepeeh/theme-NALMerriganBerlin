@@ -1,4 +1,4 @@
-<form id="search-form" name="search-form" action="/exhibits/merrigan/items/browse" method="get">    <input type="text" name="search" id="query" value="" title="Search" placeholder="Search...">        
+<form id="search-form" name="search-form" action="<?php echo url('/items/browse'); ?>" method="get">    <input type="text" name="search" id="query" value="" title="Search" placeholder="Search...">        
 <fieldset id="advanced-form" title="advanced search fields">
 <div id="search-narrow-by-fields" class="field">
         <div class="label"><?php echo __('<label for="advanced-0-element_id">Narrow by Specific Field</label>'); ?></div>
@@ -61,7 +61,7 @@
         </div>
        
     </div>
-<p><a href="/exhibits/merrigan/items/search?query=&amp;query_type=keyword&amp;record_types%5B%5D=Item&amp;record_types%5B%5D=File">Advanced Search</a></p>
+<p><a href="<?php echo url('/items/search?query=&amp;query_type=keyword&amp;record_types%5B%5D=Item&amp;record_types%5B%5D=File'); ?>">Advanced Search</a></p>
 </fieldset>
 <button id="submit_search" value="Search" type="submit" name="submit_search">
 

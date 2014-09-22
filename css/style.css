@@ -1078,6 +1078,13 @@ header:after {
 
 /* @end */
 /* @group ----- Home Page ----- */
+
+#home .homepage-text {
+  font-style:italic;
+  font-size:0.96em;
+  margin: 0px 1%;
+}
+
 #home #primary {
   float: left;
   float: left;
@@ -1201,7 +1208,7 @@ header:after {
 #recent-items .item img { /** NAL customization **/
   float: right;
   margin-left: 1.25em;
-  margin-bottom: 1.25em;
+  margin-bottom: .5em;
   border: 1px solid #ccc;
   max-height: 6em;
   max-width:6em;

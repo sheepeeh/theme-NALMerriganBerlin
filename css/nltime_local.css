@@ -18,7 +18,7 @@
 .timeline-event-label {
      -o-text-overflow: ellipsis;   /* Opera */
     text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
-     -moz-binding: url('/exhibits/merrigan/css/ellipsis.xml#ellipsis'); /* Workaround for Firefox */
+     -moz-binding: url('ellipsis.xml#ellipsis'); /* Workaround for Firefox */
     overflow:hidden;              /* don't show excess chars */
     white-space:nowrap;           /* force single line */
     width: 350px;                 /* fixed width */

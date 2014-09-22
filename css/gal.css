@@ -1,10 +1,9 @@
 .exhibit-gallery-item img {
-	max-width:100px;
-	max-height:100px;
+	max-height:130px;
 }
 
 .exhibit-item-link img {
-	border: 5px solid #333367;
+	border: 2px solid #333367;
 	margin-top: 5px;
 	margin-left: 3px;
 	box-shadow:none !important;
@@ -47,6 +46,10 @@
 	margin-right: 5px;
 }
 
+.layout-gallery .exhibit-item-link *, .layout-gallery .download-file * {
+    margin-bottom: 10px !important;
+    max-width:none !important;
+ }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
@@ -62,17 +65,18 @@
     .layout-gallery .exhibit-item, .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width: 700px;
         min-width: 700px;
-        border-right:5px solid rgba(206, 217, 233, 1);
     }
 
     .exhibit-item-caption {
         width: 668px;
         float:none;
     }
-	
-	.layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
-	   float:none;
-	}
+
+    .layout-file-text .fullsize {
+            clear:both;
+            float:none !important;
+        }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -88,7 +92,6 @@
     .layout-gallery .exhibit-item .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width: 300px;
         min-width: 300px;
-        border-right:5px solid rgba(206, 217, 233, 1);
     }
 
     .exhibit-item-caption {
@@ -96,9 +99,11 @@
         float:none;
     }
 
-	.layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
-	   float:none;
-	}
+    .layout-file-text .fullsize {
+            clear:both;
+            float:none !important;
+        }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -115,19 +120,18 @@
     .exhibit-item-caption {
         width: 320px;
         float:none;
-		border-right:5px solid rgba(206, 217, 233, 1);
     }
 
     .layout-gallery .exhibit-item .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width: 420px;
         min-width: 300px;
-
-        float:none;
     }
 
-    .layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
-	   float:none;
-	}
+    .layout-file-text .fullsize {
+            clear:both;
+            float:none !important;
+        }
+
 
 }
 
@@ -143,16 +147,16 @@
     .layout-gallery .exhibit-item, .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
         width:300px;
         min-width: 300px;
-        border-right:5px solid rgba(206, 217, 233, 1);
     }
 
     .exhibit-item-caption {
         width:290px;
     }
 
-	.layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
-	   float:none;
-	}
+    .layout-file-text .fullsize {
+        clear:both;
+        float:none !important;
+    }
 
 }
 
@@ -172,13 +176,57 @@ p {
     -moz-font-language-override: normal;
 }
 
-.layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-link {
-   float:right;
-   margin-right:10px;
+/* File w/Text Styles */
+.layout-file-text 
+.exhibit-items.fullsize {
+max-width: 300px;
+text-align: center;
+padding: 10px 5px 0px 5px;
 }
 
-.layout-gallery .gallery .exhibit-item:nth-of-type(4n) .exhibit-item-caption {
-   float:left;
-   margin-right:0px;
-   margin-left:10px;
+.layout-file-text 
+.exhibit-items.left {
+    margin-right:1%;
+}
+
+.layout-file-text 
+.exhibit-items.right {
+    margin-left:1%;
+}
+
+.left .download-file img {
+    max-height:300px;
+    -webkit-box-shadow: #cccccc 3px 3px 3px;
+    -moz-box-shadow: #cccccc 3px 3px 3px;
+    box-shadow: #cccccc 3px 3px 3px;
+    border:2px solid #036;
+    margin-bottom:10px;
+
+}
+
+.right .download-file img {
+    max-height:300px;
+    -webkit-box-shadow: #cccccc -3px 3px 3px;
+    -moz-box-shadow: #cccccc -3px 3px 3px;
+    box-shadow: #cccccc -3px 3px 3px;
+    border:2px solid #036;
+    margin-bottom:10px;
+
+}
+
+.layout-file-text .exhibit-items .download-file {
+    margin:0;
+    padding:0;
+}
+
+
+.layout-file-text .exhibit-item-caption h3 {
+    margin-top:0px;
+    font-size:10pt;
+}
+
+.layout-file-text .exhibit-item-caption p {
+    font-size:8pt;
+    font-style:italic;
+    text-align: justify;
 }

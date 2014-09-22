@@ -17,7 +17,7 @@
   <?php elseif (!metadata('item', 'has files') && metadata('item','Item Type Name') == 'Physical Object'): ?>
 
     <div id="itemfiles" class="element">
-        <div class="element-text"><img src="/exhibits/merrigan/files/theme_uploads/binder_fallback.png" alt="Placeholder image for a physical object."></div>
+        <div class="element-text"><img src="<?php echo url('/files/theme_uploads/binder_fallback.png'); ?>" alt="Placeholder image for a physical object."></div>
     </div>
 <?php endif; ?>
 
