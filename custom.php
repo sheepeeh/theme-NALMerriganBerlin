@@ -96,7 +96,7 @@ function to_previous() {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Exhibit</a></p></div>';
            } elseif (strpos($uri, 'files/show') != false) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Item</a></p></div>';
-           } elseif (strpos($referer, 'items/browse') != false) {
+           } elseif (strpos($referer, 'items/browse') != false && strpos($uri, '/browse?search=') == false) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Search Results</a></p></div>';
            } elseif (strpos($referer, 'collections/show') != false) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Collection Page</a></p></div>';
