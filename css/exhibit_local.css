@@ -200,3 +200,40 @@
 .exhibit-item-caption h3 {
   font-size:16px;
 }
+
+.exhibit-page-nav ul, .exhibit-page-nav li {
+  margin-top:0px;
+  width:100%;
+}
+#secondary-nav > li:nth-child(1) .exhibit-title {
+  font-weight:600;
+}
+
+.exhibit-page-nav a:link, .exhibit-page-nav a:visited, .exhibit-page-nav a:visited {
+  padding: 0px;
+}
+
+#secondary-nav > li:nth-child(2) > ul:nth-child(1) {
+  width: 100%;
+  list-style:disc outside;
+  margin-left:0.5em;
+}
+
+
+#secondary-nav > li:nth-child(2) > ul:nth-child(1) > li {
+  float:left;
+  line-height:1.5em;
+  width:48%;
+}
+
+#secondary-nav > li:nth-child(2) > ul:nth-child(1) > li a:first-line {
+  margin-left:-1em;
+}
+
+#secondary-nav > li:nth-child(2) {
+  margin-bottom:1em;
+}
+
+h1 {
+  clear:both;
+}

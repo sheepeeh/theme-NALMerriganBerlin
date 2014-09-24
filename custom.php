@@ -34,21 +34,21 @@ function exhibit_builder_page_nav_sneaky($exhibitPage = null)
     $html .= '<li>';
     $html .= '<a class="exhibit-title" href="'. html_escape(exhibit_builder_exhibit_uri($exhibit)) . '">';
     $html .= html_escape($exhibit->title) .'</a></li>' . "\n";
-    foreach ($pagesTrail as $page) {
-        $linkText = $page->title;
-        $pageExhibit = $page->getExhibit();
-        $pageParent = $page->getParent();
-        $pageSiblings = ($pageParent ? exhibit_builder_child_pages($pageParent) : $pageExhibit->getTopPages());
+    // foreach ($pagesTrail as $page) {
+    //     $linkText = $page->title;
+    //     $pageExhibit = $page->getExhibit();
+    //     $pageParent = $page->getParent();
+    //     $pageSiblings = ($pageParent ? exhibit_builder_child_pages($pageParent) : $pageExhibit->getTopPages());
 
-        $html .= "<li>\n<ul>\n";
-        foreach ($pageSiblings as $pageSibling) {
-          if ($pageSibling->title != "Items in the Exhibit" && $pageSibling->title != "Selected Documents 2") {
-            $html .= '<li' . ($pageSibling->id == $page->id ? ' class="current"' : '') . '>';
-            $html .= '<a class="exhibit-page-title" href="' . html_escape(exhibit_builder_exhibit_uri($exhibit, $pageSibling)) . '">';
-            $html .= html_escape($pageSibling->title) . "</a></li>\n"; }
-        }
-        $html .= "</ul>\n</li>\n";
-    }
+    //     $html .= "<li>\n<ul>\n";
+    //     foreach ($pageSiblings as $pageSibling) {
+    //       if ($pageSibling->title != "Items in the Exhibit" && $pageSibling->title != "Selected Documents 2") {
+    //         $html .= '<li' . ($pageSibling->id == $page->id ? ' class="current"' : '') . '>';
+    //         $html .= '<a class="exhibit-page-title" href="' . html_escape(exhibit_builder_exhibit_uri($exhibit, $pageSibling)) . '">';
+    //         $html .= html_escape($pageSibling->title) . "</a></li>\n"; }
+    //     }
+    //     $html .= "</ul>\n</li>\n";
+    // }
     $html .= '</ul>' . "\n";
     $html = apply_filters('exhibit_builder_page_nav', $html);
     return $html;
@@ -74,7 +74,7 @@ function link_to_related_exhibits($item) {
         echo '<h3>Appears in Exhibits</h3>';
         foreach($exhibits as $exhibit) {
             if (!in_array($exhibit->slug, $inlist)) {
-                echo '<div class="element-text"><a href="' . url('/exhibits/merrigan/exhibits/show/') . $exhibit->slug . '">'.$exhibit->title.'</a></div>';
+                echo '<div class="element-text"><a href="' . url('/exhibits/show/') . $exhibit->slug . '">'.$exhibit->title.'</a></div>';
                 array_push($inlist, $exhibit->slug);
             }
         }
@@ -92,7 +92,7 @@ function to_previous() {
 
     
     if ($uri != "/exhibits/speccoll/merrigan/" && $uri != "/exhibits/speccoll/merrigan") {
-           if (strpos($referer, 'exhibits/show') != false && strpos($referer, '/item/') == false) {
+           if (strpos($referer, 'exhibits/show') != false && strpos($uri, '/item/') == true) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Exhibit</a></p></div>';
            } elseif (strpos($uri, 'files/show') != false) {
               echo '<div class="previous-page"><p><a href="' . $referer . '" title="Return to the previous page">&larrhk; Back to Item</a></p></div>';

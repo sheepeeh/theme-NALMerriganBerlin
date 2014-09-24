@@ -22,7 +22,8 @@
 ?>
 
 <nav id="exhibit-pages">
-    <?php echo exhibit_builder_page_nav_sneaky(); ?>
+    <?php echo exhibit_builder_page_nav(); ?>
+    <br />
 </nav>
 
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
