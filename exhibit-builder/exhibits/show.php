@@ -22,7 +22,7 @@
 ?>
 
 <nav id="exhibit-pages">
-    <?php echo exhibit_builder_page_nav(); ?>
+    <?php echo exhibit_builder_page_nav_sneaky(); ?>
     <br />
 </nav>
 
