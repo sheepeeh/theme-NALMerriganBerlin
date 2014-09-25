@@ -1474,7 +1474,6 @@ ul.title-list {
 .item-pagination {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid #eee;
   padding-top: 1.25em;
 }
 
@@ -1486,6 +1485,15 @@ ul.title-list {
 .item-pagination .next a {
   float: right;
   text-align: right;
+}
+
+.page-bottom {
+    border-top: 1px solid #eee;
+}
+
+.page-top {
+    border-bottom: 1px solid #eee;
+    padding-bottom:1.25em;
 }
 
 .item .tags {

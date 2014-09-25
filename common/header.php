@@ -47,6 +47,7 @@
     <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+    <a class="hidden" alt="Skip to content." href="#content">Skip to content.</a><!--Skip link for screen readers. -->
     <div id="white-wrapper">
         <header id="header-back">
             <!-- Begin NAL main header -->

@@ -302,3 +302,13 @@ ul.inline li {
 }
 
 
+.bib-folder a {
+    text-decoration:none;
+}
+
+h2.bib-page {
+    margin-top:-1.5em;
+    margin-bottom:0px;
+    margin-left:1.5em;
+    font-size: 1.2em;
+}
