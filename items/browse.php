@@ -81,7 +81,21 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
 
     <?php if ($date = metadata('item', array('Dublin Core', 'Date'))): ?>
     <div class="item-description"><p><strong><?php echo __('Date'); ?>:</strong>
-        <?php echo $date; ?>
+        <?php if (count(metadata('item', array('Dublin Core', 'Date'), array('all' => true))) > 1): ?>
+               <?php  $dates = metadata('item', array('Dublin Core', 'Date'), array('all' => true)); ?>
+               <?php $count = sizeof($dates);?>
+               <?php foreach ($dates as $d): ?>
+                  <?php if ($count > 1): ?>
+                        <?php  echo "$d, "; ?>
+                        <?php $count -= 1; ?>
+                  <?php else: ?>
+                        <?php  echo "$d"; ?>
+                    <?php endif; ?>
+               <?php endforeach; ?>
+
+           <?php else: ?>
+                <?php echo $date; ?>
+           <?php endif; ?>
     </div>
     <?php endif; ?>
 
