@@ -3,6 +3,29 @@ $pageTitle = __('Browse Items');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
+<?php parse_str($_SERVER['QUERY_STRING'], $queryarray); ?>
+
+<?php if (array_key_exists('collection',$queryarray) && $queryarray['collection'] != ''): ?>
+
+    <?php
+       $db = get_db();
+       $collection = $db->getTable('Collection')->find($queryarray['collection']);
+       $collectionTitle = strip_formatting(metadata($collection, array('Dublin Core', 'Title')));
+      if ($collectionTitle == '') {
+          $collectionTitle = __('[Untitled]');
+      }
+      ?>
+
+     <h1><?php echo $collectionTitle; ?></h1>
+
+      <?php if ($description = metadata($collection, array('Dublin Core', 'Description'),array('index' => 0))): ?>
+          <?php echo $description; ?>
+      <?php endif; ?>
+      <?php if ($description = metadata($collection, array('Dublin Core', 'Description'),array('index' => 1))): ?>
+          <?php echo $description; ?>
+      <?php endif; ?>
+<?php endif; ?>
+
 <h3><?php echo __('%s Items', $total_results); ?></h3>
 <p class="disclaimer">Please note that full-text search is only available for items which have successfully had their text extracted. Due to the nature of the materials, many documents are not OCR-compatible.</p>
 
@@ -22,6 +45,7 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
 </div>
 
 <?php endif; ?>
+
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item hentry">
