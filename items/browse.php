@@ -58,7 +58,7 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
 
             $searchlink = record_url('item').'?' . $_SERVER['QUERY_STRING'];
 
-            echo '<h3><a href="'.$searchlink.'">'. metadata('item', array('Dublin Core','Title')).'</a></h3>';
+            echo '<div><h3><a href="'.$searchlink.'">'. metadata('item', array('Dublin Core','Title')).'</a></h3></div>';
         }
 
         else
@@ -75,10 +75,12 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
             <?php echo files_for_item(array('item_image' => 'square_thumbnail', 'imgAttributes' => array('alt' => 'Thumbnail for the first content page of the item, linking to the full file.' ) ) ); ?>
     </div>
     <?php endif; ?>
+    
 
+    <div class="item-details">
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
     <div class="item-description"><p><strong><?php echo __('Description'); ?>:</strong>
-        <?php echo $description; ?>
+        <?php echo $description . '</p>'; ?>
     </div>
     <?php endif; ?>
 
@@ -97,14 +99,14 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
                <?php endforeach; ?>
 
            <?php else: ?>
-                <?php echo $contributor; ?>
+                <?php echo $contributor . '</p>'; ?>
            <?php endif; ?>
     </div>
     <?php endif; ?>
 
 
     <?php if ($date = metadata('item', array('Dublin Core', 'Date'))): ?>
-    <div class="item-description"><p><strong><?php echo __('Date'); ?>:</strong>
+    <div class="item-date"><p><strong><?php echo __('Date'); ?>:</strong>
         <?php if (count(metadata('item', array('Dublin Core', 'Date'), array('all' => true))) > 1): ?>
                <?php  $dates = metadata('item', array('Dublin Core', 'Date'), array('all' => true)); ?>
                <?php $count = sizeof($dates);?>
@@ -118,17 +120,18 @@ $sortLinks[__('Date')] = 'Dublin Core,Date';
                <?php endforeach; ?>
 
            <?php else: ?>
-                <?php echo $date; ?>
+                <?php echo $date . '</p>'; ?>
            <?php endif; ?>
     </div>
     <?php endif; ?>
-
+    </div>
 
  <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
 
   </div><!-- end class="item-meta" -->
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
+
 
 <?php echo pagination_links(); ?>
 

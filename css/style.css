@@ -1463,7 +1463,7 @@ ul.title-list {
 .browse .item { /** NAL customization **/
   clear: both;
   border-bottom: 1px solid #eee;
-  padding: 2em 0;
+  padding: 1em 0px;
   overflow: hidden;
 }
 
@@ -1566,7 +1566,6 @@ ul.title-list {
 
 
 .browse .item h2, .browse .item h3 { /** NAL customization **/
-  float: left;
   display: inline;
   width: 700px;
 }
@@ -1672,7 +1671,7 @@ ul.title-list {
   }
 }
 .browse .item-meta p:first-of-type {
-  margin-top: 0;
+  margin-top: 1em;
 }
 
 .browse .item-meta > div {
@@ -1682,6 +1681,12 @@ ul.title-list {
   width: 700px;
   margin: 0;
 }
+
+
+.browse .item-details p {
+  margin-bottom:0.25em;
+}
+
 @media only screen and (max-width: 767px) {
   .browse .item-meta > div {
     margin: 0;
@@ -1735,10 +1740,6 @@ ul.title-list {
 
 #outputs {
   clear: both;
-}
-
-.item-img a {
-  display: block;
 }
 
 .item + .pagination-nav {
@@ -2370,10 +2371,45 @@ footer nav + p {
   #mobile-nav {
     width: 300px;
   }
+
+  #featured-item .featured-image {
+    float:none;
+    clear:both;
+    display:inline-block;
+  }
+
+  #featured-item .item-description {
+    width:90%;
+  }
+
+  .browse .item .item-meta .item-img {
+    clear: both !important;
+    margin-bottom: 2em;
+    display: inline-block;
+    float: none;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 768px) and (min-width: 480px) and (max-width: 767px) {
   #mobile-nav {
     width: 420px;
+  }
+    #featured-item .featured-image {
+    float:none;
+    clear:both;
+    display:inline-block;
+  }
+
+  #featured-item .item-description {
+    width:90%;
+  }
+
+  .browse .item .item-meta .item-img {
+    clear: both !important;
+    margin-bottom: 2em;
+    display: inline-block;
+    float: none;
+    text-align: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2439,12 +2475,30 @@ footer nav + p {
     border-bottom: 1px solid #ccc;
   }
 
+    #featured-item .featured-image {
+    float:none;
+    clear:both;
+    display:inline-block;
+  }
+
+  #featured-item .item-description {
+    width:90%;
+  }
+
   /* @end */
   /* @group ----- Items/Browse ----- */
   .browse .item img {
     max-width: 50%;
     margin-bottom: 1.5em;
     margin-top: 1.5em;
+  }
+
+ .browse .item .item-meta .item-img {
+    clear: both !important;
+    margin-bottom: 2em;
+    display: inline-block;
+    float: none;
+    text-align: center;
   }
 
   .browse .item {
