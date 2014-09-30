@@ -1754,6 +1754,7 @@ ul.title-list {
 
 .search-entry select {
   margin-bottom: 0.75em;
+  margin-right:0.25em;
 }
 
 .search-entry input[type=text] {
