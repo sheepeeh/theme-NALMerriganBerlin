@@ -276,7 +276,7 @@ function custom_paging() {
 
         //Update the query string without the page and with the sort_fields
         $updatedquery = http_build_query($queryarray);
-        $updatedquery = preg_replace('/%5B[0-9]+%5D/simU', '%5B%5D', $updatedquery);
+        
 
         // Find where we currently are in the result set
         $key = array_search($current, $itemIds);
